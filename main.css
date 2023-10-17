@@ -1,0 +1,844 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Comfortaa', cursive;
+}
+
+
+
+.wrap
+{
+   
+    height: 100vh;
+    width: 100vw;
+}
+
+.shrink
+{
+    max-width: 1200px;
+}
+
+/* makes all content in center */
+/* .cont
+{
+    width: 1200px;
+    margin: 0 auto;
+} */
+
+
+/*-----------navigation Section------------ */
+.header
+{
+    display: flex;
+    margin-top: 5px;
+    padding: 10px;
+    /* width: 1200px; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo
+{
+    width: 70px;
+
+
+}
+.logo-txt
+{
+    font-size: 1.8rem;
+    margin-left: -1rem;
+}
+
+.logo-cont
+{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.navi-bar 
+{
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+}
+
+.navi-bar a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 1.15rem;
+    
+}
+
+.navi-bar a:hover
+{
+    transition: font-size 150ms,font-weight 150ms;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+
+/* ----------Main Section---------- */
+
+
+.main
+{
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items:center ;
+    gap:5rem;
+    margin: 4rem auto;
+    padding: 0 1rem 8rem;
+    /* height: 100vh; */
+   /* width: 100vw; */
+}
+
+.main-left
+{
+    flex-grow: 1;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    /* margin: 2rem 2rem 2.5rem 2rem; */
+    /* padding: 2rem; */
+    
+  
+}
+.main-l-heading
+{
+    font-size: 35px;
+    letter-spacing: 0.15rem;
+}
+
+.running
+{
+    color:slateblue ;
+    font-weight: 800;
+}
+
+.left-anim
+{
+    font-size: 45px;
+    line-height: 50px;
+}
+.left-desc
+{
+    margin-top: 1rem;
+    width: 70%;
+    font-weight: 500;
+
+}
+.main-btn
+{
+    position: relative;
+    background-color: rgb(246, 86, 86);
+    padding: 0.8rem 2.3rem;
+    font-weight: 500;
+   
+    width: fit-content;
+
+    box-shadow: 5px 5px 7px rgba(45,45,45,0.3);
+    cursor: pointer;
+    border: 3px solid transparent;
+    color: white;
+    font-size: 18px;
+    transition: color 0.5s;
+}
+
+.btn-txt
+{
+    position: relative;
+    z-index: 1;
+}
+
+
+.main-btn::before
+{
+    content: "";
+    position:absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    background-color: whitesmoke;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s;
+
+}
+
+.main-btn:hover::before
+{
+    transform: scaleX(1);
+}
+
+.main-btn:hover
+{
+    border: 3px solid rgb(246, 86, 86);
+    color: black;
+}
+
+
+.main-right
+{
+    
+    position: relative;
+    /* width: 500px; */
+    /* height: 670px;     */
+    
+}
+.main-r-img
+{
+    object-fit: cover;
+    width:345px;
+    height:420px;
+}
+
+.posi
+{
+    position: absolute;
+    
+    
+}
+.main-img
+{
+    
+    display: block;
+    /* margin: 2.5rem; */
+    /* z-index: -1; */
+    padding: 2.5rem;
+    animation: scale 2s linear infinite alternate;
+    /* transition: all 1s; */
+}
+
+@keyframes scale {
+    from{
+        transform: scale(1);
+        filter: grayscale(0);
+    }
+    to{
+        box-shadow: 5px 5px 10px black;
+        transform: scale(0.85);
+        filter: grayscale(1);
+    }
+    
+}
+.d1{
+    z-index: 10;
+    bottom: 0.5rem;
+    right: 1rem;
+    animation: circle 6s linear infinite ;
+    
+}
+@keyframes circle {
+    50%{
+        bottom:8%;
+        right: 5%;
+    }
+}
+
+
+.d2{
+    z-index: 10;
+    bottom: 10px;
+    left: 30px;
+    animation: cube 6s ease infinite ;
+}
+@keyframes cube {
+    50%{
+        bottom:5%;
+        transform: rotateY(180deg);
+    }
+}
+
+
+.d3{
+    z-index: 10;
+    top: 10px;
+    right: -2rem;
+    animation: dots 8s linear infinite ;
+
+}
+@keyframes dots {
+    50%{
+        top:4%;
+        transform: rotateX(180deg);
+    }
+}
+
+
+.d5{
+    z-index: 10;
+    top: 40px;
+    left:5px;
+    animation: zig 6s linear infinite ;
+    
+}
+@keyframes zig {
+    50%{
+       transform: translate(2rem,-2rem) rotate(45deg);
+        
+    }
+}
+
+
+/* .d4
+{
+    z-index: 10;
+    bottom: 1rem;
+    left: 50%;
+    animation: plus 6s linear infinite alternate ;
+}
+@keyframes plus {
+    50%{
+        
+        transform: translate(-1.5rem);
+    }
+
+    100%
+    {
+        transform: translate(1.5rem);
+    }
+} */
+
+
+
+.faded
+{
+    position: absolute;
+    user-select: none;
+    font-size: 7em;
+    color: rgb(231, 231, 231);
+    left: -14%;
+    bottom: -16%;
+    font-weight: bold;
+    /* z-index:0; */
+}
+
+
+
+
+/*-----------Projects Section------------ */
+.project
+{
+    background-color: rgb(231, 231, 231);
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+    /* align-items: center; */
+    margin-top: 5rem;
+
+
+
+}
+
+.pro-heading{
+    color: orangered;
+    font-size: 90px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.pro-container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.pro-cards
+{
+    position: relative;
+    width: 90%;
+    height: 550px;
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 50px black;
+
+}
+#pro1
+{
+    background-image: url(./img/project/project-1.jpg);
+    align-self: flex-start;
+}
+#pro2
+{
+    background-image: url(./img/project/project-2.jpg);
+    align-self: flex-end;
+    
+}
+#pro3
+{
+    background-image: url(./img/project/project-3.webp);
+    align-self: flex-start;
+}
+#pro4
+{
+    background-image: url(./img/project/project-4.jpg);
+    align-self: flex-end;
+}
+.pro-cards::after
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background-color: #1f1f1f5a;
+
+}
+
+.pro-cards::before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1s;
+    z-index: 1;
+    background:linear-gradient(45deg,#4b6df38d,#5ff2ff6b);
+
+    
+}
+.pro-cards:hover::before
+{
+    transform: scale(1);
+
+}
+
+
+.pro-card-num
+{
+    position: absolute;
+    top: -20px;
+
+    color:white;
+    font-size: 200px;
+    font-weight: 600;
+    z-index: 2;
+    opacity: 0; 
+    /* or 
+    display:none; */
+}
+
+.num-left-side
+{
+    left: 0;
+    
+}
+
+.num-right-side
+{
+    right: 0;
+}
+
+.pro-cards:hover .pro-card-num
+{
+    opacity: 1;
+}
+
+.pro-card-content
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: white;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 4;
+    transition: transform 0.5s;
+
+}
+.content-left
+{
+    left: 10%;
+}
+.content-right
+{
+    right: 0;
+}
+
+.pro-cards:hover .pro-card-content
+{
+    transform: scale(1.15);
+}
+
+.pro-icons
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 10px;
+}
+
+.ico-size
+{
+    width: 40px;
+}
+
+.pro-card-heading
+{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3.5rem;
+    width: 70%;
+    
+}
+
+.pro-card-desc
+{
+    width: 70%;
+    font-size: 16px;
+
+    font-style: italic;
+}
+
+.pro-btn-grp
+{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    gap: 1rem;
+}
+
+#pro-btn
+{
+    border: none;
+}
+.ico
+{
+    cursor: pointer;
+    font-size: 35px;
+    color: white;
+    transition: color 0.4s;
+
+}
+
+.ico:hover
+{
+    color: rgba(240, 78, 78, 0.815);
+}
+
+
+
+
+
+
+/* --------------Skills Section------------ */
+.skill
+{
+    position: relative;
+    display: flex;
+    padding: 0rem;
+    margin: 10rem auto;
+    gap: 30px;
+}
+
+.ski-faded
+{
+    position: absolute;
+    font-size: 10em;
+    font-weight: bold;
+    color: rgb(231,231,231);
+    user-select: none;
+    bottom: -52%;
+    right: -12%;
+    /* overflow-y: hidden; */
+}
+
+
+.ski-left
+{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.ski-l-head
+{
+    color: rgb(246, 86, 86);
+    font-size: 50px;
+    font-weight:bold;
+    line-height: 40px;
+}
+.ski-head-capit
+{
+    font-size: 80px;
+    
+}
+
+.ski-l-desc
+{
+    margin-top: 1rem;
+    width: 85%;
+    text-align: justify;
+}
+
+
+.ski-l-desc p{
+    margin: 15px 0;
+}
+
+
+
+
+
+.ski-right
+{
+    display: flex;
+    width: 50%;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 2rem;
+    justify-content: center;
+
+}
+.ski-r-bubl
+{
+    position: absolute;
+    z-index: -2;
+
+  /* ---------------- */
+    /* Truely Center vertically and horizontally */
+    /* as the block we want to center also have some height and width */
+
+
+    /* vertically centers the top edge of the block */
+    top: 50%;
+
+    /* horizontzlly centers the top edge of the block */
+    left: 50%;
+
+
+    transform: translate(-50%, -50%);
+    /* here in transform,this translation is done relative to block or div which is being moved
+
+    so, 50%(translate)---->50% of block's width and 50% of block's height */
+
+
+  /* ----------------- */
+
+
+    /* my-way 
+    justify-self: center;
+    align-self: center; 
+    top: 20%;
+    left:20%; */
+
+    animation: bubl 2s linear infinite alternate;
+
+}
+
+@keyframes bubl {
+    100%
+    {
+        left: 55%;
+        top: 45%;
+    }
+    
+}
+
+ .ski-r-icon
+ {
+    width: 90px;
+    opacity: 0.8;
+    transition: transform 0.5s;
+ }
+
+ .ski-r-icon:hover
+ {
+    opacity:1;
+    transform: scale(1.2);
+ }
+
+
+
+
+
+/* ---------------Form-section----------------- */
+
+
+.form
+{
+    margin-top: 13rem;
+    width: 100%;
+    background: rgb(231, 231, 231);
+    
+    
+}
+.fom-container
+{
+    /* this has centered our container */
+    margin: 0 auto;
+     
+}
+.fom-head
+{
+    color: rgb(246, 86, 86);
+    font-size:5em ;
+    padding-top: 3rem;
+}
+.fom-subhead
+{
+    color: rgba(112, 112, 112, 0.914);
+    font-size: 3rem;
+    text-transform: capitalize;
+    padding-top: 2rem;
+}
+
+.fom-boxes-container
+{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.form-tag
+{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 30px;
+    margin: 2rem 5rem;
+
+}
+
+.fom-txt-box
+{
+    /* width: 100%; */
+    height: 45px;
+    padding: 0 2rem;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px rgba(111, 110, 110, 0.7);
+    font-weight: 500;
+
+    border: none;
+}
+
+.fom-box-desc
+{
+    /* so that our coded rows in html works for this */
+    height: auto;
+    padding-top: 1rem;
+    
+    
+}
+
+.fom-submit
+{
+    margin: 2rem 0;
+    border: none;
+    padding: 1.2rem 2rem;
+    transition: transform 0.4s,color 0.4s;
+    font-size: 1.4rem;
+    
+}
+
+.fom-submit:hover
+{
+    border: none;
+    transform: scale(0.9);
+}
+
+.submit-icon
+{
+    padding: 0 1rem;
+    font-size: 1.4rem;
+}
+
+
+/* ----------footer-------------- */
+
+.foot
+{
+    margin-top: -1rem;
+    position: relative;
+    background-color:#343d68;
+    padding: 5rem;
+}
+
+.foo-container
+{
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.foo-left
+{
+    display: flex;
+    gap: 1rem;
+}
+.foo-left a
+{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.foo-left a:hover
+{
+    color: rgb(246, 86, 86);
+}
+.foo-mid
+{
+    color: rgb(144, 141, 141);
+   position: absolute;
+   bottom: 7%;
+   left: 45%;
+   user-select: none;
+   font-size: 1.2rem;
+}
+.foo-heart
+{
+    color: rgb(246, 86, 86);
+    margin: 0 0.5rem;
+}
+.foo-right
+{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.foo-ico
+{
+    cursor: pointer;
+    font-size: 35px;
+    color: white;
+    transition: color 0.3s;
+}
+
+.foo-ico:hover
+{
+    color: rgb(246, 86, 86);
+}
+
