@@ -308,19 +308,19 @@
 	box-shadow: 0 0 50px black;
 }
 #pro1 {
-	background-image: url(./img/project/project-1.jpg);
+	background-image: url(../img/project/project-1.jpg);
 	align-self: flex-start;
 }
 #pro2 {
-	background-image: url(./img/project/project-2.jpg);
+	background-image: url(../img/project/project-2.jpg);
 	align-self: flex-end;
 }
 #pro3 {
-	background-image: url(./img/project/project-3.webp);
+	background-image: url(../img/project/project-3.webp);
 	align-self: flex-start;
 }
 #pro4 {
-	background-image: url(./img/project/project-4.jpg);
+	background-image: url(../img/project/project-4.jpg);
 	align-self: flex-end;
 }
 .pro-cards::after {
